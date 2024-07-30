@@ -2,7 +2,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
 const token = require("../favoriteToken.js");
 
-const bot = new TelegramBot (token, {polling: true});
+const bot = new TelegramBot (token, {polling: 1000});
 
 let editList = false;
 
