@@ -51,7 +51,11 @@ bot.onText(/\/list/, (msg) => {
         const text = favoriteList[userId][chatInfo].map((el, i) => {
             return `${i + 1}.[${el.name}](${el.url})`
         }).join('\n')
-        bot.sendMessage(msg.chat.id, text, {parse_mode: 'Markdown', disable_web_page_preview: true, reply_to_message_id: msg.message_id});
+        bot.sendMessage(msg.chat.id, 
+`
+Вот твой закладки из этого чата
+
+${text}`, {parse_mode: 'Markdown', disable_web_page_preview: true, reply_to_message_id: msg.message_id});
     }
 })
 
