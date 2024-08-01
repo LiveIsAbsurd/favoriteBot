@@ -53,7 +53,7 @@ bot.onText(/\/list/, (msg) => {
         }).join('\n')
         bot.sendMessage(msg.chat.id, 
 `
-Вот твой закладки из этого чата
+Твои закладки из этого чата
 
 ${text}`, {parse_mode: 'Markdown', disable_web_page_preview: true, reply_to_message_id: msg.message_id});
     }
