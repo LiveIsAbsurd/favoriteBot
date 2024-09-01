@@ -60,7 +60,7 @@ ${text}`, {parse_mode: 'Markdown', disable_web_page_preview: true, reply_to_mess
 })
 
 setTimeout(() => {
-    if (!editList) {return};
+    if (editList) {return};
     fs.writeFile("../favoriteList.json", JSON.stringify(favoriteList, null, 2), "UTF-8", (err) => {
         if (err) {
           console.log(err);
